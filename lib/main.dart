@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui_clone/ui/screens/chat_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:whatsapp_ui_clone/core/routes/routes.dart';
+import 'package:whatsapp_ui_clone/core/theme/light_theme.dart';
+import 'state_management/app_bar/app_bar_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,15 +11,20 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AppBarCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: lightTheme,
+        onGenerateRoute: Routes.onGenerateRoute,
       ),
-      home: const ChatsScreen(),
     );
   }
 }
