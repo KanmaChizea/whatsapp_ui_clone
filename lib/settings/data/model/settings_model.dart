@@ -4,11 +4,11 @@ class SettingsModel {
   final String title;
   final String subtitle;
   final IconData icon;
-  final Function()? onPressed;
-  SettingsModel({
+  final String routeName;
+  const SettingsModel({
     required this.title,
     required this.subtitle,
     required this.icon,
-    this.onPressed,
+    required this.routeName,
   });
 }

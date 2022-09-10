@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui_clone/core/constants/colors.dart';
-import 'package:whatsapp_ui_clone/settings/data/settings_list.dart';
+import 'package:whatsapp_ui_clone/settings/data/constants.dart';
 
 import '../../core/constants/others.dart';
 
@@ -63,7 +63,10 @@ class SettingsScreen extends StatelessWidget {
                     leading: Transform.rotate(
                         angle: index == 0 ? math.pi / 2 : 0,
                         child: Icon(settingsList[index].icon)),
-                    onTap: settingsList[index].onPressed,
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, settingsList[index].routeName);
+                    },
                   );
                 }),
             const Text('from'),

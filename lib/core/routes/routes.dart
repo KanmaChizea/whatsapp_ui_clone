@@ -3,6 +3,8 @@ import 'package:whatsapp_ui_clone/core/constants/colors.dart';
 import 'package:whatsapp_ui_clone/home/screens/home.dart';
 import 'package:whatsapp_ui_clone/settings/screens/settings_screen.dart';
 
+import '../../settings/screens/account_screen.dart';
+
 class Routes {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -16,7 +18,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const SettingsScreen());
       // case 'status privacy':
       // case 'select contact':
-      // case 'account':
+      case 'account':
+        return MaterialPageRoute(builder: (context) => const AccountScreen());
       // case 'chats':
       // case 'notifications':
       // case 'storage and data':
