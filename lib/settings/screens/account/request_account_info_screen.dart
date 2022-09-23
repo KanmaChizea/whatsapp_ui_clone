@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/colors.dart';
 import '../../../core/constants/others.dart';
 
 class RequestAccountInfoScreen extends StatelessWidget {

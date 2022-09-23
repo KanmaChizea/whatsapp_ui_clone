@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui_clone/core/constants/colors.dart';
 import 'package:whatsapp_ui_clone/home/screens/home.dart';
 import 'package:whatsapp_ui_clone/settings/screens/chats/chats_screen.dart';
+import 'package:whatsapp_ui_clone/settings/screens/help/help_screen.dart';
+import 'package:whatsapp_ui_clone/settings/screens/notification/notification_screen.dart';
+import 'package:whatsapp_ui_clone/settings/screens/storage%20and%20data/storage_screen.dart';
 
 import '../../settings/screens/account/account_screen.dart';
 import '../../settings/screens/account/change_number_screen.dart';
@@ -29,9 +32,13 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const AccountScreen());
       case 'chats':
         return MaterialPageRoute(builder: (context) => const ChatsScreen());
-      // case 'notifications':
-      // case 'storage and data':
-      // case 'help':
+      case 'notifications':
+        return MaterialPageRoute(
+            builder: (context) => const NotificationScreen());
+      case 'storage and data':
+        return MaterialPageRoute(builder: (context) => const StorageScreen());
+      case 'help':
+        return MaterialPageRoute(builder: (context) => const HelpScreen());
       // case 'contact us':
       // case 'manage storage':
       // case 'network usage':

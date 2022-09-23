@@ -19,12 +19,12 @@ const List<SettingsModel> settingsList = [
       title: 'Notifications',
       subtitle: 'Message, group & call tones',
       icon: Icons.notifications_rounded,
-      routeName: ''),
+      routeName: 'notifications'),
   SettingsModel(
       title: 'Storage and data',
       subtitle: 'Network usage, auto-download',
       icon: Icons.data_usage_rounded,
-      routeName: ''),
+      routeName: 'storage and data'),
   SettingsModel(
       title: 'App language',
       subtitle: 'English (phone\'s language)',
@@ -34,7 +34,7 @@ const List<SettingsModel> settingsList = [
       title: 'Help',
       subtitle: 'Help centre,contact us, privacy policy',
       icon: Icons.help_outline_rounded,
-      routeName: ''),
+      routeName: 'help'),
   SettingsModel(
       title: 'Invite friends',
       subtitle: '',

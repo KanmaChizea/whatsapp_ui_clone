@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui_clone/core/constants/others.dart';
+
 import 'package:whatsapp_ui_clone/settings/widgets/settings_header.dart';
+
+import '../../widgets/list_tile_with_switch.dart';
 
 class ChatsScreen extends StatelessWidget {
   const ChatsScreen({Key? key}) : super(key: key);
@@ -35,22 +37,17 @@ class ChatsScreen extends StatelessWidget {
             child: SettingsHeader(title: 'Chat settings'),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 44, right: 16),
+            padding: const EdgeInsets.only(left: 44, right: 16),
             child: Column(
               children: [
-                ListTile(
-                    title: Text('Enter is send',
-                        style: Theme.of(context).textTheme.bodyText2),
-                    subtitle: Text('Enter key will send your message',
-                        style: Theme.of(context).textTheme.caption),
-                    trailing: Switch(value: false, onChanged: (_) {})),
-                ListTile(
-                    title: Text('Media Visibility',
-                        style: Theme.of(context).textTheme.bodyText2),
-                    subtitle: Text(
-                        'Show newly downloaded media in your device\'s gallery',
-                        style: Theme.of(context).textTheme.caption),
-                    trailing: Switch(value: false, onChanged: (_) {})),
+                const ListTileWithSwitch(
+                    title: 'Enter is send',
+                    subtitle: 'Enter key will send your message'),
+                const ListTileWithSwitch(
+                  title: 'Media Visibility',
+                  subtitle:
+                      'Show newly downloaded media in your device\'s gallery',
+                ),
                 ListTile(
                   title: Text('Font size',
                       style: Theme.of(context).textTheme.bodyText2),
