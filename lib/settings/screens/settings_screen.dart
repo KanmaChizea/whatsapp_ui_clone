@@ -64,8 +64,11 @@ class SettingsScreen extends StatelessWidget {
                         angle: index == 0 ? math.pi / 2 : 0,
                         child: Icon(settingsList[index].icon)),
                     onTap: () {
-                      Navigator.pushNamed(
-                          context, settingsList[index].routeName);
+                      if (index == 4) {
+                      } else {
+                        Navigator.pushNamed(
+                            context, settingsList[index].routeName);
+                      }
                     },
                   );
                 }),
