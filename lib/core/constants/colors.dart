@@ -9,3 +9,4 @@ const checkmarkBlue = Color(0xff4fb6ec);
 const chatBg = Color(0xffebe5de);
 const grey = Color(0xffd9d9d9);
 const darkGrey = Color(0xff465a65);
+const red = Color(0xffe6093d);

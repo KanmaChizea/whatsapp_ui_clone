@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui_clone/core/constants/colors.dart';
 import 'package:whatsapp_ui_clone/home/screens/home.dart';
-import 'package:whatsapp_ui_clone/settings/screens/settings_screen.dart';
+import 'package:whatsapp_ui_clone/settings/screens/chats/chats_screen.dart';
 
-import '../../settings/screens/account_screen.dart';
+import '../../settings/screens/account/account_screen.dart';
+import '../../settings/screens/account/change_number_screen.dart';
+import '../../settings/screens/account/delete_account_screen.dart';
+import '../../settings/screens/account/privacy_screen.dart';
+import '../../settings/screens/account/request_account_info_screen.dart';
+import '../../settings/screens/account/security_screen.dart';
+import '../../settings/screens/account/two_step_verification_screen.dart';
+import '../../settings/screens/settings_screen.dart';
 
 class Routes {
   static Route onGenerateRoute(RouteSettings settings) {
@@ -20,7 +27,8 @@ class Routes {
       // case 'select contact':
       case 'account':
         return MaterialPageRoute(builder: (context) => const AccountScreen());
-      // case 'chats':
+      case 'chats':
+        return MaterialPageRoute(builder: (context) => const ChatsScreen());
       // case 'notifications':
       // case 'storage and data':
       // case 'help':
@@ -28,12 +36,22 @@ class Routes {
       // case 'manage storage':
       // case 'network usage':
       // case 'backup':
-      // case 'privacy':
-      // case 'security':
-      // case 'verification':
-      // case 'change no':
-      // case 'account info':
-      // case 'delete account':
+      case 'privacy':
+        return MaterialPageRoute(builder: (context) => const PrivacyScreen());
+      case 'security':
+        return MaterialPageRoute(builder: (context) => const SecurityScreen());
+      case 'verification':
+        return MaterialPageRoute(
+            builder: (context) => const TwoStepVerificationScreen());
+      case 'change no':
+        return MaterialPageRoute(
+            builder: (context) => const ChangeNumberScreen());
+      case 'account info':
+        return MaterialPageRoute(
+            builder: (context) => const RequestAccountInfoScreen());
+      case 'delete account':
+        return MaterialPageRoute(
+            builder: (context) => const DeleteAccountScreen());
 
       default:
         return _errorPage();
